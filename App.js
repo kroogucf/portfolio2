@@ -3,6 +3,7 @@ import { View, StyleSheet, Text, FlatList, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-elements';
 import MainTodo from './components/MainTodo';
 import LoginApp from './components/LoginApp';
+import JournalApp from './components/Journal';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 

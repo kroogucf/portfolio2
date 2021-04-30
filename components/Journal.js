@@ -16,21 +16,25 @@ export default function JournalApp({ submitJournalPost }) {
 
     return(
         <View>
-            <TextInput>
+            <TextInput
                 placeholder="Name This Entry"
                 onChangeText={newJournalTitle}
+                >
             </TextInput>
-            <TextInput>
+            <TextInput
                 placeholder="Write your entry."
                 onChangeText={newJournalPost}
+                >
             </TextInput>
-            <TextInput>
+            <TextInput
                 placeholder="Date this entry"
                 onChangeText={setNewDate}
+                >
             </TextInput>
-            <Button>
+            <Button
                 onPress={() => submitJournalPost(title, text, date)}
                 title="Add a New Journal Entry"
+                >
             </Button>
         </View>
     )
