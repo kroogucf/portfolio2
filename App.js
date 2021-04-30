@@ -16,6 +16,10 @@ import { createStackNavigator } from '@react-navigation/stack';
           title="Todos"
           onPress={() => props.navigation.navigate('Todos')}
         />
+        <Button
+          title="Journal"
+          onPress={() => props.navigation.navigate('Journal')}
+        />
       </View>
     );
   }
@@ -32,6 +36,8 @@ import { createStackNavigator } from '@react-navigation/stack';
       </View>
     );
   }
+
+  
   
   const Stack = createStackNavigator();
   
