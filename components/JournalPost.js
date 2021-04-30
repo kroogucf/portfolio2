@@ -9,9 +9,9 @@ export default function JournalPost(props) {
 
     return(
         <View style={styles.view}>
-            <Text>{title}</Text>
-            <Text>{date}</Text>
-            <Text>{text}</Text>
+            <Text style={styles.titleText}>{title}</Text>
+            <Text style={styles.dateText}>{date}</Text>
+            <Text style={styles.text}>{text}</Text>
         </View>
     )
 
