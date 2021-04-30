@@ -8,7 +8,7 @@ export default function JournalPost(props) {
     let [text, setText] = useState(props.item.text);
 
     return(
-        <View>
+        <View style={styles.view}>
             <Text>{title}</Text>
             <Text>{date}</Text>
             <Text>{text}</Text>
@@ -18,11 +18,21 @@ export default function JournalPost(props) {
 }
 
 const styles = StyleSheet.create({
-    input: {
+    view: {
         margin: 10,
         padding: 5,
         borderBottomWidth: 1,
         backgroundColor: '#86839B',
         borderBottomColor: 'black',
     },
+    text: {
+        fontSize: 10,
+    },
+    dateText: {
+        fontSize: 8,
+    },
+    titleText: {
+        fontSize: 10,
+        fontWeight: 'bold',
+    }
 })
