@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { View, StyleSheet, Text, FlatList, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-elements';
 import MainTodo from './components/MainTodo';
+import LoginApp from './components/LoginApp';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -9,6 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack';
     return (
       <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text>Home Screen</Text>
+        <LoginApp />
         <Button
           title="Todos"
           onPress={() => props.navigation.navigate('Todos')}
