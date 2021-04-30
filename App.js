@@ -9,10 +9,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 
   function HomeScreen(props) {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', padding: 10,}}>
         <Text>Home Screen</Text>
         <LoginApp />
         <Button
+          style={{padding: 10,}}
           title="Todos"
           onPress={() => props.navigation.navigate('Todos')}
         />
@@ -26,10 +27,11 @@ import { createStackNavigator } from '@react-navigation/stack';
   
   function TodosScreen(props) {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 10, }}>
         <Text>Todos!</Text>
         <MainTodo />
         <Button
+          style={{padding: 10,}}
           title="Back to Home"
           onPress={() => props.navigation.navigate('Home')}
         />
@@ -39,10 +41,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 
   function JournalScreen(props) {
     return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 10, }}>
         <Text>Journal</Text>
         <JournalApp />
         <Button
+          style={{padding: 10,}}
           title="Back to Home"
           onPress={() => props.navigation.navigate('Home')}
         />
@@ -58,6 +61,7 @@ import { createStackNavigator } from '@react-navigation/stack';
         <Stack.Navigator>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Todos" component={TodosScreen} />
+          <Stack.Screen name="Journal" component={JournalScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     );
