@@ -19,20 +19,21 @@ export default function JournalPost(props) {
 
 const styles = StyleSheet.create({
     view: {
-        margin: 10,
+        marginBottom: 10,
         padding: 5,
         borderBottomWidth: 1,
         backgroundColor: '#86839B',
         borderBottomColor: 'black',
+        borderRadius: 10,
     },
     text: {
-        fontSize: 10,
+        fontSize: 14,
     },
     dateText: {
-        fontSize: 8,
+        fontSize: 12,
     },
     titleText: {
-        fontSize: 10,
+        fontSize: 14,
         fontWeight: 'bold',
     }
 })
