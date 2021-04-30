@@ -6,7 +6,7 @@ export default function JournalMain(){
     let [data, setNewJournals] = useState([]);
 
     const submitNewJournal = (text, date, title) => {
-        setNewJournal((prevJournals) => {
+        setNewJournals((prevJournals) => {
           return [
             { key: Math.random().toString(), text: text, date: date, title: title},
             ...prevJournals
