@@ -7,15 +7,6 @@ export default function JournalMain() {
 
     let [data, setNewJournals] = useState([]);
 
-    const submitNewJournal = (title, text, date) => {
-        setNewJournals((prevJournals) => {
-          return [
-            { key: Math.random().toString(), text: text, date: date, title: title},
-            ...prevJournals
-          ]
-        })
-      }
-
     return((<SafeAreaView>
         <Text>JOURNAL APP</Text>
         <FlatList
@@ -24,6 +15,13 @@ export default function JournalMain() {
             <JournalPost item={item} />
           )}>
         </FlatList>
-        <NewJournalPost submitNewJournal={submitNewJournal}></NewJournalPost>
+        <NewJournalPost submitNewJournal={(title, text, date) => {
+        setNewJournals((prevJournals) => {
+          return [
+            { key: Math.random().toString(), text: text, date: date, title: title},
+            ...prevJournals
+          ]
+        })
+      }}></NewJournalPost>
       </SafeAreaView>));
 }
