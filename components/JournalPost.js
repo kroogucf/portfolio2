@@ -3,9 +3,9 @@ import { StyleSheet, Text, TextInput, Button, View} from "react-native";
 
 export default function JournalPost(props) {
 
-    let [title, setTitle] = useState(props.title);
-    let [date, setDate] = useState(props.date);
-    let [text, setText] = useState(props.text);
+    let [title, setTitle] = useState(props.item.title);
+    let [date, setDate] = useState(props.item.date);
+    let [text, setText] = useState(props.item.text);
 
     return(
         <View>

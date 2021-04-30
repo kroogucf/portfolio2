@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, Button, View} from "react-native";
+import JournalPost from './JournalPost';
 
 export default function JournalMain(){
 
@@ -19,7 +20,7 @@ export default function JournalMain(){
         <FlatList
           data={data} 
           renderItem={({ item }) => (
-            <AllJournals item={item} handleToggle={()=>{handleToggle(item.key)}} journals={data} />
+            <JournalPost item={item} handleToggle={()=>{handleToggle(item.key)}} journals={data} />
           )}>
         </FlatList>
         <NewJournalPost submitNewJournal={submitNewJournal}></NewJournalPost>
