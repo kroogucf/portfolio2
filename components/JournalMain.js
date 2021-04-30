@@ -20,7 +20,7 @@ export default function JournalMain(){
         <FlatList
           data={data} 
           renderItem={({ item }) => (
-            <JournalPost item={item} handleToggle={()=>{handleToggle(item.key)}} journals={data} />
+            <JournalPost item={item} />
           )}>
         </FlatList>
         <NewJournalPost submitNewJournal={submitNewJournal}></NewJournalPost>

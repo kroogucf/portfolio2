@@ -64,7 +64,7 @@ return (
       <FlatList
         data={data} 
         renderItem={({ item }) => (
-          <AllTodos item={item} handleToggle={()=>{handleToggle(item.key)}} todos={data} />
+          <AllTodos item={item} handleToggle={()=>{handleToggle(item.key)}} />
         )}>
       </FlatList>
       <NewTodo submitNewTodo={submitNewTodo}></NewTodo>
