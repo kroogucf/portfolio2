@@ -13,9 +13,9 @@ export default function LoginApp() {
         }
 
         if (!passRef.current.value) {
-            setErrorMessage("You left password blank")
+            
         } else {
-
+            setErrorMessage("You left password blank")
         }
     }
 
