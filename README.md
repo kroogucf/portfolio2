@@ -6,6 +6,6 @@ The two previous projects I used are, firstly the project I chose to convert is 
 
 3 New components are
 
-1. Login System (It accepts any username and password for ease of access, but have to be something in each field or won't login)
-2. Journal Entry Page. This is where user can type in a title, body of text, and a date for a journal entry
+1. Login System (It accepts any username and password for ease of access, but have to be something in each field or won't login. Takes place in LoginApp.js)
+2. Journal Entry Page. This is where user can type in a title, body of text, and a date for a journal entry (Takes place in JournalMain.js and NewJournalPost.js)
 3. Component that displays and styles journal entries to the user. (Takes place in JournalPost.js)
