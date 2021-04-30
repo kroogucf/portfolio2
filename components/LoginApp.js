@@ -13,12 +13,12 @@ export default function LoginApp() {
         }
 
         if (!passRef.current.value) {
+            setErrorMessage("You left password blank!")
+        } else {
             console.log("Valid Password!")
             setUsername(userRef.current.value)
             setErrorMessage("")
             setLoggedIn(true)
-        } else {
-            setErrorMessage("You left password blank")
         }
     }
 
