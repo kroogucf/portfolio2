@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     view: {
         marginBottom: 10,
         marginTop: 10,
-        paddingHorizontal: 15,
+        paddingLeft: 15,
         paddingVertical: 6,
         backgroundColor: '#5383B9',
     },
