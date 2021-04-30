@@ -6,6 +6,7 @@ import LoginApp from './components/LoginApp';
 import NewJournalPost from './components/NewJournalPost';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import JournalMain from './components/JournalMain';
 
   function HomeScreen(props) {
     return (
@@ -43,7 +44,7 @@ import { createStackNavigator } from '@react-navigation/stack';
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 10, }}>
         <Text>Journal</Text>
-        <NewJournalPost />
+        <JournalMain />
         <Button
           style={{padding: 10,}}
           title="Back to Home"
