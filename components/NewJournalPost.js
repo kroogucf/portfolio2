@@ -20,17 +20,17 @@ export default function NewJournalPost(props) {
 
     return(
         <View>
-            <TextInput
+            <TextInput styles={styles.input}
                 placeholder="Name This Entry"
                 onChangeText={newJournalTitle}
                 >
             </TextInput>
-            <TextInput
+            <TextInput styles={styles.input}
                 placeholder="Write your entry."
                 onChangeText={newJournalPost}
                 >
             </TextInput>
-            <TextInput
+            <TextInput styles={styles.input}
                 placeholder="Date this entry"
                 onChangeText={newJournalDate}
                 >
@@ -43,3 +43,13 @@ export default function NewJournalPost(props) {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    input: {
+        marginBottom: 10,
+        paddingHorizontal: 8,
+        paddingVertical: 6,
+        borderBottomWidth: 1,
+        borderBottomColor: 'black',
+    },
+})
