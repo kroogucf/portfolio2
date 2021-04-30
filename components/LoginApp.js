@@ -31,6 +31,14 @@ export default function LoginApp() {
             <TextInput ref={userRef} placeholder="Username"></TextInput>
             <TextInput ref={passRef} placeholder="Username"></TextInput>
             <Button onPress={doLogin} title="Login"></Button>
+            <Text>{errorMessage}</Text>
         </View>
     )
+    let loggedInScreen = (
+        <View>
+            <Text>Welcome, {username}</Text>
+        </View>
+    )
+
+    return !loggedIn ? notLoggedInScreen : loggedInScreen
 }
