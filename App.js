@@ -1,90 +1,43 @@
 import React, {useState, useEffect} from 'react';
-import { StyleSheet, Text, FlatList, SafeAreaView } from 'react-native';
-import AllTodos from './components/AllTodos';
-import NewTodo from './components/newTodo';
+import { View, StyleSheet, Text, FlatList, SafeAreaView } from 'react-native';
+import { Button } from 'react-native-elements';
+import MainTodo from './components/MainTodo';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-export default function App() {
-
-  let [data, setNewTodos] = useState([
-    {
-      key: '1',
-      completed: false,
-      description: "Watch episode 3 of Falcon and the Winter Soldier",
-      date: "two days ago",
-    },
-    {
-      key: '2',
-      completed: false,
-      description: "Eat at Tin and Taco, because it is fantastic",
-      date: "yesterday",
-    },
-    {
-      key: '3',
-      completed: false,
-      description: "Watch Godzilla Vs Kong for a second time because why not",
-      date: "this morning",
-    },
-  ]);
-
-  useEffect(() => {console.log(data)}, [data])
-
-  const handleToggle = (itemkey) => {
-
-    const newData = data.map((item) => {
-
-      if (item.key === itemkey) {
-        const updateItem = {
-          ...item,
-          completed: !item.completed,
-        };
-        return updateItem;
-      }
-
-      return item;
-
-    })
-
-    setNewTodos(newData)
-
+  function HomeScreen(props) {
+    return (
+      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Text>Home Screen</Text>
+        <Button
+          title="Todos"
+          onPress={() => props.navigation.navigate('MainTodo')}
+        />
+      </View>
+    );
   }
-
-  const submitNewTodo = (text, date) => {
-    setNewTodos((prevTodos) => {
-      return [
-        { key: Math.random().toString(), completed:false, description: text, date: date},
-        ...prevTodos
-      ]
-    })
+  
+  function TodosScreen(props) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Todos!</Text>
+        <Button
+          title="Back to Home"
+          onPress={() => props.navigation.navigate('Home')}
+        />
+      </View>
+    );
   }
-
-return (
-    (<SafeAreaView style={styles.container}>
-      <Text style={styles.title}>TODO APP</Text>
-      <FlatList
-        data={data} 
-        renderItem={({ item }) => (
-          <AllTodos item={item} handleToggle={()=>{handleToggle(item.key)}} todos={data} />
-        )}>
-      </FlatList>
-      <NewTodo submitNewTodo={submitNewTodo}></NewTodo>
-    </SafeAreaView>)
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'lightgray',
-  },
-  title: {
-    height: 80,
-    paddingTop: 25,
-    backgroundColor: 'blue',
-    color: 'white',
-    fontSize: 20,
-    textAlign: 'center',
-  },
-
-});
+  
+  const Stack = createStackNavigator();
+  
+  function App() {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Screen name="Todos" component={TodosScreen} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
