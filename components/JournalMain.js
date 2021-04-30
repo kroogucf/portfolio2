@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, TextInput, Button, View} from "react-native";
 import JournalPost from './JournalPost';
+import NewJournalPost from './NewJournalPost';
 
 export default function JournalMain(){
 
