@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, Button, View} from "react-native";
 
-export default function NewJournalPost({ submitJournalPost }) {
+export default function NewJournalPost({ submitNewJournal }) {
     
     let [title, setNewTitle] = useState('');
     let [text, setNewText] = useState('');
@@ -32,7 +32,7 @@ export default function NewJournalPost({ submitJournalPost }) {
                 >
             </TextInput>
             <Button
-                onPress={() => submitJournalPost(title, text, date)}
+                onPress={() => submitNewJournal(title, text, date)}
                 title="Add a New Journal Entry"
                 >
             </Button>
