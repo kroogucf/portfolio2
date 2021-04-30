@@ -11,7 +11,7 @@ import { createStackNavigator } from '@react-navigation/stack';
         <Text>Home Screen</Text>
         <Button
           title="Todos"
-          onPress={() => props.navigation.navigate(<MainTodo />)}
+          onPress={() => props.navigation.navigate('MainTodo')}
         />
       </View>
     );
@@ -21,6 +21,7 @@ import { createStackNavigator } from '@react-navigation/stack';
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
         <Text>Todos!</Text>
+        <MainTodo />
         <Button
           title="Back to Home"
           onPress={() => props.navigation.navigate('Home')}
