@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 8,
         paddingVertical: 6,
         borderBottomWidth: 1,
+        fontSize: 24,
         borderBottomColor: 'black',
     },
 })
