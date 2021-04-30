@@ -34,7 +34,7 @@ export default function LoginApp() {
             <TextInput style={styles.textField} ref={userRef} placeholder="Username"></TextInput>
             <TextInput style={styles.textField} ref={passRef} placeholder="Password"></TextInput>
             <Button onPress={doLogin} title="Login"></Button>
-            <Text>{errorMessage}</Text>
+            <Text style={styles.error}>{errorMessage}</Text>
         </View>
     )
     let loggedInScreen = (
@@ -53,7 +53,7 @@ export default function LoginApp() {
             fontWeight: 600,
             margin: 10,
         },
-    }
+    },
 
     );
 
