@@ -52,8 +52,8 @@ export default function LoginApp() {
             backgroundColor: "#ccc",
             fontWeight: 600,
             margin: 10,
-        },
-    },
+        }
+    }
 
     );
 
