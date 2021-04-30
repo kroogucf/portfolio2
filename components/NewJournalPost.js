@@ -20,17 +20,17 @@ export default function NewJournalPost(props) {
 
     return(
         <View>
-            <TextInput styles={styles.input}
+            <TextInput style={styles.input}
                 placeholder="Name This Entry"
                 onChangeText={newJournalTitle}
                 >
             </TextInput>
-            <TextInput styles={styles.input}
+            <TextInput style={styles.input}
                 placeholder="Write your entry."
                 onChangeText={newJournalPost}
                 >
             </TextInput>
-            <TextInput styles={styles.input}
+            <TextInput style={styles.input}
                 placeholder="Date this entry"
                 onChangeText={newJournalDate}
                 >
