@@ -5,7 +5,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "deploy": "gh-pages -d web-build",
+    "predeploy": "expo build:web"
   },
   "dependencies": {
     "@react-native-community/masked-view": "0.1.10",
@@ -28,5 +30,5 @@
     "@babel/core": "^7.9.0"
   },
   "private": true,
-  "homepage": "/portfolio2"
+  "homepage": "http://kroogucf.github.io/portfolio2"
 }
