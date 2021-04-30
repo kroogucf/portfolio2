@@ -16,3 +16,13 @@ export default function JournalPost(props) {
     )
 
 }
+
+const styles = StyleSheet.create({
+    input: {
+        margin: 10,
+        padding: 5,
+        borderBottomWidth: 1,
+        backgroundColor: '#86839B',
+        borderBottomColor: 'black',
+    },
+})
