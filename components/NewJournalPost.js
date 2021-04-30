@@ -36,7 +36,9 @@ export default function NewJournalPost({ submitNewJournal }) {
                 >
             </TextInput>
             <Button
-                onPress={() => submitNewJournal(title, text, date)}
+                onPress={() => {
+                    console.log(submitNewJournal)
+                    submitNewJournal(title, text, date)}}
                 title="Add a New Journal Entry"
                 >
             </Button>
