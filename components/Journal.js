@@ -3,12 +3,15 @@ import { StyleSheet, Text, TextInput, Button, View} from "react-native";
 
 export default function JournalApp({ submitJournalPost }) {
     
-
+    let [title, setNewTitle] = useState('');
     let [text, setNewText] = useState('');
     let [date, setNewDate] = useState('');
 
     const newJournalPost = (value) => {
         setNewText(value);
+    }
+    const newJournalTitle = (value) => {
+        set
     }
 
     return(
@@ -22,7 +25,7 @@ export default function JournalApp({ submitJournalPost }) {
                 onChangeText={setNewDate}
             </TextInput>
             <Button>
-                onPress
+                onPress={() => submitJournalPost(text, date)}
             </Button>
         </View>
     )
