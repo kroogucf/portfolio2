@@ -44,7 +44,6 @@ export default function LoginApp() {
 
     let notLoggedInScreen = (
         <View>
-            <Text>Please Login</Text>
             <TextInput style={styles.textField} ref={userRef} placeholder="Username"></TextInput>
             <TextInput style={styles.textField} ref={passRef} placeholder="Password"></TextInput>
             <Button onPress={doLogin} title="Login"></Button>
