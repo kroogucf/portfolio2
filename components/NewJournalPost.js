@@ -32,7 +32,7 @@ export default function NewJournalPost(props) {
                 >
             </TextInput>
             <Button
-                onPress={() => props.submitNewJournal(title, text, date)}
+                onPress={() => {props.submitNewJournal(title, text, date)}}
                 title="Add a New Journal Entry"
                 >
             </Button>
