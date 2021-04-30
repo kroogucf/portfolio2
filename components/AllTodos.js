@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     },
     completeTodo: {
         backgroundColor: "green",
-        padding: 20,
+        padding: 10,
         marginTop: 20,
         borderColor: "black",
         borderWidth: 1,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     },
     incompleteTodo: {
         backgroundColor: "lightgray",
-        padding: 20,
+        padding: 10,
         marginTop: 20,
         borderColor: "black",
         borderWidth: 1,
