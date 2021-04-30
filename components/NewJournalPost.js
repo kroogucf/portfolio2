@@ -49,6 +49,6 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: "#ccc",
         fontWeight: 600,
-        margin: 10,
+        margin: 5,
     },
 })
