@@ -4,6 +4,20 @@ import { useState } from "react";
 import { useRef } from "react";
 
 export default function LoginApp() {
+    const styles = StyleSheet.create({
+        error: {
+            color: "#F05D5E",
+        },
+        textField: {
+            padding: 10,
+            backgroundColor: "#ccc",
+            fontWeight: 600,
+            margin: 10,
+        }
+    }
+
+    );
+
     let doLogin = () => {
         if (!userRef.current.value) {
             setErrorMessage("You left username blank")
@@ -42,20 +56,5 @@ export default function LoginApp() {
             <Text>Welcome, {username}</Text>
         </View>
     )
-
-    const styles = StyleSheet.create({
-        error: {
-            color: "#F05D5E",
-        },
-        textField: {
-            padding: 10,
-            backgroundColor: "#ccc",
-            fontWeight: 600,
-            margin: 10,
-        }
-    }
-
-    );
-
     return !loggedIn ? notLoggedInScreen : loggedInScreen
 }
