@@ -12,7 +12,7 @@ export default function AllTodos(props) {
     }
     return(
         <TouchableOpacity style={todoStyle} onPress={props.handleToggle}>
-            <Text style={styles.text}><CheckBox checked={props.item.completed} />{props.item.description}</Text>
+            <Text style={styles.text}><CheckBox onPress={props.handleToggle} checked={props.item.completed} />{props.item.description}</Text>
             <Text style={styles.text}>{"Date: "+props.item.date}</Text>
         </TouchableOpacity>
     )
