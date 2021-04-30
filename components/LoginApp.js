@@ -31,7 +31,7 @@ export default function LoginApp() {
     let notLoggedInScreen = (
         <View>
             <Text>Please Login</Text>
-            <TextInput ref={userRef} placeholder="Username"></TextInput>
+            <TextInput style={styles.textField} ref={userRef} placeholder="Username"></TextInput>
             <TextInput ref={passRef} placeholder="Password"></TextInput>
             <Button onPress={doLogin} title="Login"></Button>
             <Text>{errorMessage}</Text>
@@ -42,6 +42,20 @@ export default function LoginApp() {
             <Text>Welcome, {username}</Text>
         </View>
     )
+
+    const styles = StyleSheet.create({
+        error: {
+            color: "#F05D5E",
+        },
+        textField: {
+            padding: 10,
+            backgroundColor: "#ccc",
+            fontWeight: 600,
+            margin: 10,
+        },
+    }
+
+    );
 
     return !loggedIn ? notLoggedInScreen : loggedInScreen
 }
