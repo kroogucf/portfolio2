@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyleSheet, Text, TouchableOpacity } from 'react-native';
 import { CheckBox } from 'react-native-elements';
 
 export default function AllTodos(props) {
 
-    let [completed, setCompleted] = useState(props.item.completed);
-
     let todoStyle;
-    if (completed) {
+    if (props.item.completed) {
         todoStyle = styles.completeTodo
     } else {
         todoStyle = styles.incompleteTodo
