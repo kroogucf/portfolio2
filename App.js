@@ -11,7 +11,7 @@ import { createStackNavigator } from '@react-navigation/stack';
         <Text>Home Screen</Text>
         <Button
           title="Todos"
-          onPress={() => props.navigation.navigate('MainTodo')}
+          onPress={() => props.navigation.navigate(<MainTodo />)}
         />
       </View>
     );
