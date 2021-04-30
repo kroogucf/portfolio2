@@ -3,7 +3,9 @@ import { StyleSheet, Text, TextInput, Button, View} from "react-native";
 
 export default function JournalMain(){
 
-    const submitNewJournal = (text, date) => {
+    let [data, setNewJournals] = useState([]);
+
+    const submitNewJournal = (text, date, title) => {
         setNewJournal((prevJournals) => {
           return [
             { key: Math.random().toString(), text: text, date: date, title: title},
