@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, Button, View} from "react-native";
 
-export default function JournalApp({ submitJournalPost }) {
+export default function NewJournalPost({ submitJournalPost }) {
     
     let [title, setNewTitle] = useState('');
     let [text, setNewText] = useState('');

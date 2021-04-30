@@ -3,7 +3,7 @@ import { View, StyleSheet, Text, FlatList, SafeAreaView } from 'react-native';
 import { Button } from 'react-native-elements';
 import MainTodo from './components/MainTodo';
 import LoginApp from './components/LoginApp';
-import JournalApp from './components/Journal';
+import NewJournalPost from './components/NewJournalPost';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
@@ -43,7 +43,7 @@ import { createStackNavigator } from '@react-navigation/stack';
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', padding: 10, }}>
         <Text>Journal</Text>
-        <JournalApp />
+        <NewJournalPost />
         <Button
           style={{padding: 10,}}
           title="Back to Home"
