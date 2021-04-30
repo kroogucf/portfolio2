@@ -16,8 +16,8 @@ export default function JournalMain(){
         })
       }
 
-    return(<SafeAreaView style={styles.container}>
-        <Text style={styles.title}>JOURNAL APP</Text>
+    return((<SafeAreaView>
+        <Text>JOURNAL APP</Text>
         <FlatList
           data={data} 
           renderItem={({ item }) => (
@@ -25,5 +25,5 @@ export default function JournalMain(){
           )}>
         </FlatList>
         <NewJournalPost submitNewJournal={submitNewJournal}></NewJournalPost>
-      </SafeAreaView>);
+      </SafeAreaView>));
 }
