@@ -8,7 +8,6 @@ export default function JournalMain() {
     let [data, setNewJournals] = useState([]);
 
     return((<SafeAreaView style={styles.view}>
-        <Text>JOURNAL APP</Text>
         <FlatList
           data={data} 
           renderItem={({ item }) => (
@@ -30,8 +29,9 @@ const styles = StyleSheet.create({
     view: {
         marginBottom: 10,
         marginTop: 10,
-        paddingLeft: 15,
-        paddingVertical: 6,
-        backgroundColor: '#5383B9',
+        paddingTop: 8,
+        paddingBottom: 20,
+        borderRadius: 15,
+        backgroundColor: '#2594F2',
     },
 })
