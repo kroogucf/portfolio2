@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, FlatList, SafeAreaView } from 'react-native';
 import AllTodos from './components/AllTodos';
 import NewTodo from './components/newTodo';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
 export default function App() {
 
