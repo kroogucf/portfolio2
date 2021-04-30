@@ -7,7 +7,7 @@ export default function JournalMain() {
 
     let [data, setNewJournals] = useState([]);
 
-    return((<SafeAreaView>
+    return((<SafeAreaView style={styles.view}>
         <Text>JOURNAL APP</Text>
         <FlatList
           data={data} 
@@ -25,3 +25,13 @@ export default function JournalMain() {
       }}></NewJournalPost>
       </SafeAreaView>));
 }
+
+const styles = StyleSheet.create({
+    view: {
+        marginBottom: 10,
+        marginTop: 10,
+        paddingHorizontal: 15,
+        paddingVertical: 6,
+        backgroundColor: '#5383B9',
+    },
+})
