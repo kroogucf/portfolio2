@@ -13,7 +13,7 @@ export default function LoginApp() {
         }
 
         if (!passRef.current.value) {
-            setErrorMessage("You left username blank")
+            setErrorMessage("You left password blank")
         } else {
 
         }
