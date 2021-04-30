@@ -24,6 +24,6 @@ export default function JournalMain() {
             <JournalPost item={item} />
           )}>
         </FlatList>
-        <NewJournalPost submitNewJournal={submitNewJournal}></NewJournalPost>
+        <NewJournalPost submitNewJournal={()=>{console.log(submitNewJournal)}}></NewJournalPost>
       </SafeAreaView>));
 }
