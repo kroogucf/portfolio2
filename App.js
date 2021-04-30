@@ -41,3 +41,5 @@ import { createStackNavigator } from '@react-navigation/stack';
       </NavigationContainer>
     );
   }
+
+  export default App;
