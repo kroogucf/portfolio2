@@ -22,6 +22,6 @@ export default function JournalMain(){
             <AllJournals item={item} handleToggle={()=>{handleToggle(item.key)}} journals={data} />
           )}>
         </FlatList>
-        <NewTodo submitNewJournal={submitNewJournal}></NewTodo>
+        <NewJournalPost submitNewJournal={submitNewJournal}></NewJournalPost>
       </SafeAreaView>);
 }
