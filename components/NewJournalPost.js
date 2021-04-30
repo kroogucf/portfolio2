@@ -46,11 +46,9 @@ export default function NewJournalPost(props) {
 
 const styles = StyleSheet.create({
     input: {
-        marginBottom: 10,
-        paddingHorizontal: 8,
-        paddingVertical: 6,
-        borderBottomWidth: 1,
-        fontSize: 24,
-        borderBottomColor: 'black',
+        padding: 10,
+        backgroundColor: "#ccc",
+        fontWeight: 600,
+        margin: 10,
     },
 })
