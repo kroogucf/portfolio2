@@ -2,7 +2,7 @@ import { setStatusBarNetworkActivityIndicatorVisible } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Text, TextInput, Button, View} from "react-native";
 
-export default function NewJournalPost({ submitNewJournal }) {
+export default function NewJournalPost(props) {
     
     let [title, setNewTitle] = useState('');
     let [text, setNewText] = useState('');
@@ -37,8 +37,8 @@ export default function NewJournalPost({ submitNewJournal }) {
             </TextInput>
             <Button
                 onPress={() => {
-                    console.log(submitNewJournal)
-                    submitNewJournal(title, text, date)}}
+                    console.log(props.submitNewJournal)
+                    props.submitNewJournal(title, text, date)}}
                 title="Add a New Journal Entry"
                 >
             </Button>
