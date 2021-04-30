@@ -15,6 +15,7 @@ export default function LoginApp() {
         if (!passRef.current.value) {
             console.log("Valid Password!")
             setUsername(userRef.current.value)
+            setErrorMessage("")
         } else {
             setErrorMessage("You left password blank")
         }
