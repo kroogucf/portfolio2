@@ -30,7 +30,7 @@ export default function LoginApp() {
             <Text>Please Login</Text>
             <TextInput ref={userRef} placeholder="Username"></TextInput>
             <TextInput ref={passRef} placeholder="Username"></TextInput>
-            <Button>{errorMessage}</Button>
+            <Button onPress={doLogin} title="Login"></Button>
         </View>
     )
 }
