@@ -11,21 +11,26 @@ export default function JournalApp({ submitJournalPost }) {
         setNewText(value);
     }
     const newJournalTitle = (value) => {
-        set
+        setNewTitle(value);
     }
 
     return(
         <View>
             <TextInput>
-                placeholder="Name This Post"
+                placeholder="Name This Entry"
+                onChangeText={newJournalTitle}
+            </TextInput>
+            <TextInput>
+                placeholder="Write your entry."
                 onChangeText={newJournalPost}
             </TextInput>
             <TextInput>
-                placeholder="Date"
+                placeholder="Date this entry"
                 onChangeText={setNewDate}
             </TextInput>
             <Button>
-                onPress={() => submitJournalPost(text, date)}
+                onPress={() => submitJournalPost(title, text, date)}
+                title="Add a New Journal Entry"
             </Button>
         </View>
     )
