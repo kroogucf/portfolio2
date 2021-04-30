@@ -37,7 +37,18 @@ import { createStackNavigator } from '@react-navigation/stack';
     );
   }
 
-  
+  function JournalScreen(props) {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Journal</Text>
+        <JournalApp />
+        <Button
+          title="Back to Home"
+          onPress={() => props.navigation.navigate('Home')}
+        />
+      </View>
+    );
+  }
   
   const Stack = createStackNavigator();
   
