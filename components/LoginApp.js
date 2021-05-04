@@ -27,7 +27,11 @@ export default function LoginApp() {
             borderRadius: 10,
         },
         usernameText: {
+            textAlign: 'center',
             fontWeight: 'bold',
+        },
+        welcomeText: {
+            textAlign: 'center',
         }
     }
 
@@ -67,7 +71,7 @@ export default function LoginApp() {
     )
     let loggedInScreen = (
         <View style={styles.welcomeSuccess}>
-            <Text>Welcome,</Text>
+            <Text style={styles.welcomeText}>Welcome,</Text>
             <Text style={styles.usernameText}>{username}.</Text>
             <Text>You can view and add to your todo sheet or access your personalized journal below.</Text>
         </View>
