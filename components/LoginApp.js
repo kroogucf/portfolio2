@@ -3,6 +3,10 @@ import React from "react";
 import { useState } from "react";
 import { useRef } from "react";
 
+// This code is modified from the week 10 development assignment that asked to create a login page with a specific password.
+// I changed the 'Ch@rge!' password part to accept any password and username combo inputed to login as long as something was entered.
+// I also added some styling to the welcome and username message once logged in.
+
 export default function LoginApp() {
     const styles = StyleSheet.create({
         error: {
