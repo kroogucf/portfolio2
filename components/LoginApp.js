@@ -6,6 +6,7 @@ import { useRef } from "react";
 // This code is modified from the week 10 development assignment that asked to create a login page with a specific password.
 // I changed the 'Ch@rge!' password part to accept any password and username combination to login as long as something was entered.
 // I also added some styling to the welcome and username message once logged in.
+// I also added logout functionality
 
 export default function LoginApp() {
     const styles = StyleSheet.create({
@@ -57,7 +58,10 @@ export default function LoginApp() {
     }
 
     let doLogout = () => {
-        if (userRef.current.value) {
+        if (typeof userRef.current.value === 'object') {
+            console.log("not logged in")
+        }
+        if (typeof userRef.current.value === 'string') {
             setLoggedIn(false)
         }
     }
