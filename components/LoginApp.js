@@ -19,10 +19,12 @@ export default function LoginApp() {
             margin: 10,
         },
         welcomeSuccess: {
-            padding: 10,
-            backgroundColor: "#ccc",
-            fontWeight: 600,
-            margin: 10,
+            marginBottom: 10,
+            padding: 5,
+            borderBottomWidth: 1,
+            backgroundColor: '#9BCAF2',
+            borderBottomColor: 'black',
+            borderRadius: 10,
         }
     }
 
@@ -61,7 +63,7 @@ export default function LoginApp() {
         </View>
     )
     let loggedInScreen = (
-        <View>
+        <View style={styles.welcomeSuccess}>
             <Text>Welcome, {username}</Text>
         </View>
     )
