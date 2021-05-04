@@ -64,7 +64,7 @@ export default function LoginApp() {
     )
     let loggedInScreen = (
         <View style={styles.welcomeSuccess}>
-            <Text>Welcome, {username}</Text>
+            <Text>Welcome, {username}. You can view and add to your todo sheet or access your personalized journal below.</Text>
         </View>
     )
     return !loggedIn ? notLoggedInScreen : loggedInScreen
