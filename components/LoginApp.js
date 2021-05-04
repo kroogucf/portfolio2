@@ -25,6 +25,9 @@ export default function LoginApp() {
             backgroundColor: '#90EE90',
             borderBottomColor: 'black',
             borderRadius: 10,
+        },
+        usernameText: {
+            fontWeight: 'bold',
         }
     }
 
@@ -65,7 +68,7 @@ export default function LoginApp() {
     let loggedInScreen = (
         <View style={styles.welcomeSuccess}>
             <Text>Welcome,</Text>
-            <Text>{username}.</Text>
+            <Text style={styles.usernameText}>{username}.</Text>
             <Text>You can view and add to your todo sheet or access your personalized journal below.</Text>
         </View>
     )
