@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useRef } from "react";
 
 // This code is modified from the week 10 development assignment that asked to create a login page with a specific password.
-// I changed the 'Ch@rge!' password part to accept any password and username combo inputed to login as long as something was entered.
+// I changed the 'Ch@rge!' password part to accept any password and username combination to login as long as something was entered.
 // I also added some styling to the welcome and username message once logged in.
 
 export default function LoginApp() {
@@ -53,6 +53,13 @@ export default function LoginApp() {
             setErrorMessage("")
             setLoggedIn(true)
         }
+
+    }
+
+    let doLogout = () => {
+        if (userRef.current.value) {
+            setLoggedIn(false)
+        }
     }
 
     let [loggedIn,setLoggedIn] = useState(false)
@@ -74,6 +81,7 @@ export default function LoginApp() {
             <Text style={styles.welcomeText}>Welcome,</Text>
             <Text style={styles.usernameText}>{username}.</Text>
             <Text>You can view and add to your todo sheet or access your personalized journal below.</Text>
+            <Button onPress={doLogout} title="Logout"></Button>
         </View>
     )
     return !loggedIn ? notLoggedInScreen : loggedInScreen
