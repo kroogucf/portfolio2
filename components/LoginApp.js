@@ -58,10 +58,7 @@ export default function LoginApp() {
     }
 
     let doLogout = () => {
-        if (typeof userRef.current.value === 'object') {
-            console.log("not logged in")
-        }
-        if (typeof userRef.current.value === 'string') {
+        if (username.length > 0) {
             setLoggedIn(false)
         }
     }
