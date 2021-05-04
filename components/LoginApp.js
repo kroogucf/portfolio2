@@ -43,7 +43,7 @@ export default function LoginApp() {
             setErrorMessage("You left username blank")
             return
         } else {
-            setUsername(userRef.current.value)
+            
         }
 
         if (!passRef.current.value) {
