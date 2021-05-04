@@ -22,7 +22,7 @@ export default function LoginApp() {
             marginBottom: 10,
             padding: 5,
             borderBottomWidth: 1,
-            backgroundColor: '#9BCAF2',
+            backgroundColor: '#90EE90',
             borderBottomColor: 'black',
             borderRadius: 10,
         }
